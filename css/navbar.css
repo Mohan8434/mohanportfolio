@@ -1,0 +1,280 @@
+/*=========================================
+            NAVBAR
+=========================================*/
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+}
+
+.navbar{
+
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 10%;
+
+    background:rgba(11,17,32,.65);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+}
+
+/*=========================================
+            LOGO
+=========================================*/
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.logo span{
+
+    color:#EC4899;
+
+}
+
+/*=========================================
+            MENU
+=========================================*/
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+.nav-links li{
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#F8FAFC;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+/*=========================================
+        HOVER EFFECT
+=========================================*/
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-8px;
+
+    background:#EC4899;
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+    color:#EC4899;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/*=========================================
+            MENU BUTTON
+=========================================*/
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/*=========================================
+        NAVBAR ON SCROLL
+=========================================*/
+
+.navbar.scrolled{
+
+    background:#0B1120;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/*=========================================
+        MOBILE
+=========================================*/
+
+@media(max-width:900px){
+
+.nav-links{
+
+    position:absolute;
+
+    top:80px;
+
+    right:-100%;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#111827;
+
+    flex-direction:column;
+
+    padding-top:50px;
+
+    gap:30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.nav-links.active{
+
+    right:0;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+}
+
+}
+.nav-links a.active{
+
+    color:#EC4899;
+
+}
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+/*=============================
+        SCROLL NAVBAR
+==============================*/
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:9999;
+
+transition:.4s ease;
+
+}
+
+.navbar.scrolled{
+
+background:rgba(15,23,42,.75);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+box-shadow:0 8px 30px rgba(0,0,0,.35);
+
+}
+.nav-links a.active{
+
+color:#EC4899;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#EC4899;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
+
+width:100%;
+
+}
+
+.nav-links a{
+
+position:relative;
+
+}
+.menu-btn i {
+  pointer-events: none; /* इससे आइकॉन पर टच करने पर भी बटन ही क्लिक होगा */
+}

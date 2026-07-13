@@ -1,0 +1,105 @@
+/*=========================================
+            ABOUT SECTION
+=========================================*/
+
+#about{
+    background:#111827;
+}
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:40% 60%;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+.about-image img{
+
+    border-radius:20px;
+
+    width:100%;
+
+}
+
+.about-content h3{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.about-content h4{
+
+    color:#EC4899;
+
+    margin-bottom:20px;
+
+}
+
+.about-content p{
+
+    margin-bottom:35px;
+
+    line-height:1.9;
+
+}
+
+.about-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.detail{
+
+    background:rgba(255,255,255,.05);
+
+    padding:15px;
+
+    border-radius:12px;
+
+}
+
+.detail strong{
+
+    color:#EC4899;
+
+}
+
+.detail span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#CBD5E1;
+
+}
+
+.about-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}

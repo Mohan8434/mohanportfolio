@@ -1,0 +1,545 @@
+/*==================================================
+                GOOGLE FONT
+==================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/*==================================================
+                CSS RESET
+==================================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0B1120;
+    color:#F8FAFC;
+    overflow-x:hidden;
+}
+
+/*==================================================
+                ROOT VARIABLES
+==================================================*/
+:root{
+
+    --bg:#0B1120;
+    --bg2:#111827;
+
+    --card:#1E293B;
+
+    --primary:#7C3AED;
+    --secondary:#EC4899;
+
+    --white:#ffffff;
+
+    --text:#F8FAFC;
+    --gray:#94A3B8;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+/*==================================================
+                CONTAINER
+==================================================*/
+
+section{
+
+    width:100%;
+    padding:100px 10%;
+
+}
+
+.container{
+
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/*==================================================
+                HEADINGS
+==================================================*/
+
+h1{
+
+    font-size:4rem;
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:2.8rem;
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.5rem;
+
+}
+
+p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+                BUTTONS
+==================================================*/
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(90deg,#7C3AED,#EC4899);
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+    0 15px 40px rgba(236,72,153,.45);
+
+}
+
+/*==================================================
+                LINKS
+==================================================*/
+
+a{
+
+    text-decoration:none;
+    color:white;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/*==================================================
+            IMAGE
+==================================================*/
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+/*==================================================
+            CUSTOM SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B1120;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7C3AED;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#EC4899;
+
+}
+
+/*==================================================
+            TEXT SELECTION
+==================================================*/
+
+::selection{
+
+    background:#EC4899;
+    color:white;
+
+}
+
+/*==================================================
+            COMMON SECTION TITLE
+==================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--secondary);
+
+}
+
+.section-title p{
+
+    margin-top:10px;
+
+}
+
+/*==================================================
+            GLASS CARD
+==================================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+}
+
+/*==================================================
+            UTILITIES
+==================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mt-6{
+
+    margin-top:60px;
+
+}
+/*=========================
+      Scroll Progress
+=========================*/
+
+#progress-bar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0%;
+
+background:linear-gradient(90deg,#7C3AED,#EC4899);
+
+z-index:99999;
+
+box-shadow:
+
+0 0 10px #EC4899,
+
+0 0 20px #7C3AED;
+
+}
+/*=========================
+      Top Button
+=========================*/
+
+#topBtn{
+
+position:fixed;
+
+right:35px;
+
+bottom:35px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#EC4899;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:999;
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(236,72,153,.4);
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px);
+
+background:#7C3AED;
+
+}
+
+
+/*==================================
+            PREMIUM LOADER
+===================================*/
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+
+background:#0B1120;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+z-index:999999;
+
+transition:.8s;
+
+}
+
+.loader-logo{
+
+position:relative;
+
+width:130px;
+height:130px;
+
+margin-bottom:30px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.loader-circle{
+
+position:absolute;
+
+width:130px;
+height:130px;
+
+border-radius:50%;
+
+border:5px solid rgba(255,255,255,.08);
+
+border-top:5px solid #EC4899;
+
+border-right:5px solid #7C3AED;
+
+animation:spin 1.5s linear infinite;
+
+}
+
+.loader-text{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#EC4899,#7C3AED);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+box-shadow:0 0 30px rgba(236,72,153,.35);
+
+animation:pulse 1.5s infinite;
+
+}
+
+.loader-text h1{
+
+color:white;
+
+font-size:45px;
+
+font-weight:700;
+
+}
+
+
+
+#loader h2{
+
+color:white;
+
+font-size:34px;
+
+margin-top:10px;
+
+letter-spacing:2px;
+
+}
+
+#loader p{
+
+color:#94A3B8;
+
+margin-top:10px;
+
+margin-bottom:35px;
+
+}
+
+.loading-bar{
+
+width:240px;
+
+height:6px;
+
+background:#1E293B;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+.loading-bar span{
+
+display:block;
+
+height:100%;
+
+width:0;
+
+background:linear-gradient(90deg,#EC4899,#7C3AED);
+
+animation:loading 1.8s forwards;
+
+}
+
+.loader-hide{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+@keyframes loading{
+
+100%{
+
+width:100%;
+
+}
+}
+/*=========================
+        PARTICLES
+==========================*/
+
+#particles-js{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-1;
+
+background:#0B1120;
+
+}
+
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Yeh right-left ka extra scroll band kar dega */
+}
+.menu-btn i {
+  pointer-events: none; /* इससे आइकॉन पर टच करने पर भी बटन ही क्लिक होगा */
+}

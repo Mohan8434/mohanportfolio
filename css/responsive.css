@@ -1,0 +1,405 @@
+/*=========================================
+        RESPONSIVE DESIGN
+=========================================*/
+
+/* ========== Laptop ========== */
+
+@media (max-width: 1200px){
+
+    section{
+        padding:100px 7%;
+    }
+
+    .navbar{
+        padding:0 7%;
+    }
+
+}
+
+/* ========== Tablet ========== */
+
+@media (max-width: 992px){
+
+    /* Hero */
+
+    #home{
+        flex-direction:column-reverse;
+        justify-content:center;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero-left{
+        width:100%;
+    }
+
+    .hero-left h1{
+        font-size:50px;
+    }
+
+    .hero-left h2{
+        font-size:28px;
+    }
+
+    .hero-description{
+        margin:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .profile-box{
+        width:320px;
+        height:320px;
+    }
+
+    /* About */
+
+    .about-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .about-info{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    /* Experience */
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item{
+        width:100%;
+        margin-left:0 !important;
+        padding-left:60px;
+    }
+
+}
+
+/* ========== Mobile ========== */
+
+@media (max-width:768px){
+
+    section{
+        padding:80px 6%;
+    }
+
+    h1{
+        font-size:42px;
+    }
+
+    h2{
+        font-size:34px;
+    }
+
+    .hero-left h1{
+        font-size:42px;
+    }
+
+    .hero-left h2{
+        font-size:24px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons a{
+        width:220px;
+        text-align:center;
+    }
+
+    .profile-box{
+        width:280px;
+        height:280px;
+    }
+
+    /* Skills */
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* About */
+
+    .about-info{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ========== Small Mobile ========== */
+
+@media (max-width:576px){
+
+    .navbar{
+        height:70px;
+        padding:0 20px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero-left h1{
+        font-size:34px;
+    }
+
+    .hero-left h2{
+        font-size:20px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .profile-box{
+        width:240px;
+        height:240px;
+    }
+
+    .skill-card{
+        padding:25px;
+    }
+
+    .info-card{
+        padding:20px;
+    }
+
+    .timeline-item{
+        padding:20px 20px 20px 55px;
+    }
+
+    footer{
+        text-align:center;
+    }
+
+}
+
+/* Contact */
+
+@media(max-width:992px){
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+/* About */
+
+@media(max-width:992px){
+
+.about-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.about-details{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-buttons{
+
+    justify-content:center;
+
+}
+
+}
+/* Experience */
+
+@media(max-width:900px){
+
+.timeline::before{
+
+left:20px;
+
+}
+
+.timeline-item{
+
+width:100%;
+
+left:0 !important;
+
+padding-left:70px;
+
+padding-right:20px;
+
+}
+
+.timeline-dot{
+
+left:10px !important;
+
+right:auto;
+
+}
+
+}
+/* Contact */
+
+@media(max-width:900px){
+
+.contact-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* Footer */
+
+@media(max-width:900px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+}
+
+}
+@media(max-width:768px){
+
+.github-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.github-left{
+
+font-size:90px;
+
+}
+
+.github-tags{
+
+justify-content:center;
+
+}
+
+}
+
+/* मोबाइल स्क्रीन्स (768px से कम चौड़ाई) के लिए */
+@media (max-width: 768px) {
+  
+  /* प्रोजेक्ट कार्ड का लेआउट एक कॉलम में करें */
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  /* GitHub और Live Demo बटन वाले कंटेनर को सेट करें */
+  .project-buttons, .btn-container {
+    display: flex;
+    flex-direction: column; /* बटन एक के नीचे एक आएंगे */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .project-buttons a, .btn {
+    width: 100%; /* बटन मोबाइल स्क्रीन की पूरी चौड़ाई लेंगे */
+    text-align: center;
+  }
+  
+  /* मुख्य कंटेनर की पैडिंग कम करें ताकि स्क्रीन स्पेस बचे */
+  .container {
+    padding: 0 15px;
+  }
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Yeh right-left ka extra scroll band kar dega */
+}
+#particles-js, .bg-animation {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow: hidden;
+}
+.profile-img-container, .hero-img-box {
+  max-width: 100%; /* Yeh container ko screen ke andar hi rakhega */
+  box-sizing: border-box; /* Padding aur border ko width ke andar include karega */
+}
+/* Mobile skreens ke liye */
+@media (max-width: 768px) {
+
+  /* 1. Website ka right-left scroll band karne ke liye */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 2. Particles background wala code */
+  #particles-js, .bg-animation { 
+    width: 100% !important; 
+    max-width: 100vw !important; 
+    overflow: hidden; 
+  }
+
+  /* 3. Profile Image container wala code (YAHAN PASTE KAREIN) */
+  .profile-img-container, .hero-img-box { 
+    max-width: 100%; 
+    box-sizing: border-box; 
+  }
+
+}
+/* Hamburger toggle button ko sabse upar lane ke liye */
+.navbar__toggle, .hamburger, .nav-toggle { 
+  position: relative;
+  z-index: 9999 !important; /* Yeh button ko sabse upar le aayega */
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  
+  /* Menu button ko hamesha sabse upar rakhne ke liye */
+  .menu-btn {
+    position: relative;
+    z-index: 9999 !important;
+    cursor: pointer;
+  }
+
+  /* Mobile par nav-links ko chupane aur dikhane ka tareeka */
+  .nav-links {
+    display: none; /* Pehle se chhupa rahega */
+    position: absolute;
+    top: 70px; /* Navbar ki height ke hisab se set karein */
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e; /* Apni website ka dark background color yahan dalein */
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 9998;
+  }
+
+  /* Jab JS 'active' class jodegi, tab menu dikhega */
+  .nav-links.active {
+    display: flex;
+  }
+}

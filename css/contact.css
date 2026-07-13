@@ -1,0 +1,195 @@
+/*=========================================
+            CONTACT SECTION
+=========================================*/
+
+#contact{
+    padding:100px 0;
+    background:#0B1120;
+}
+
+.contact-container{
+
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:50px;
+    margin-top:60px;
+    align-items:start;
+
+}
+
+/*============================
+      LEFT SIDE
+=============================*/
+
+.contact-info{
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+}
+
+.contact-card{
+
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-radius:18px;
+    padding:25px;
+    transition:.4s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(124,58,237,.35);
+
+}
+
+.contact-card i{
+
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:linear-gradient(135deg,#7C3AED,#EC4899);
+    color:#fff;
+    font-size:24px;
+    margin-bottom:15px;
+
+}
+
+.contact-card h3{
+
+    color:#fff;
+    margin-bottom:8px;
+    font-size:20px;
+
+}
+
+.contact-card p{
+
+    color:#CBD5E1;
+    line-height:1.7;
+
+}
+
+/*============================
+        FORM
+=============================*/
+
+.contact-form{
+
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:35px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:16px 18px;
+    margin-bottom:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+
+    background:#1E293B;
+    color:#fff;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#EC4899;
+    box-shadow:0 0 15px rgba(236,72,153,.25);
+
+}
+
+.contact-form textarea{
+
+    resize:none;
+    min-height:180px;
+
+}
+
+/*============================
+        BUTTON
+=============================*/
+
+.contact-form button{
+
+    width:100%;
+    padding:16px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#7C3AED,#EC4899);
+
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(236,72,153,.35);
+
+}
+
+.contact-form button:disabled{
+
+    opacity:.7;
+    cursor:not-allowed;
+
+}
+
+/*============================
+      MOBILE
+=============================*/
+
+@media(max-width:900px){
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-form{
+
+    padding:25px;
+
+}
+
+}
